@@ -3,20 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CITest", "CiTest\CITest.csproj", "{641DA15D-E950-43C5-9719-BDF418C1FDA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CITest", "CiTest\CITest.csproj", "{641DA15D-E950-43C5-9719-BDF418C1FDA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{4F0FA0F9-C7D5-4779-A1EE-B470E9A5101D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{641DA15D-E950-43C5-9719-BDF418C1FDA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{641DA15D-E950-43C5-9719-BDF418C1FDA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{641DA15D-E950-43C5-9719-BDF418C1FDA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{641DA15D-E950-43C5-9719-BDF418C1FDA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F0FA0F9-C7D5-4779-A1EE-B470E9A5101D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F0FA0F9-C7D5-4779-A1EE-B470E9A5101D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F0FA0F9-C7D5-4779-A1EE-B470E9A5101D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F0FA0F9-C7D5-4779-A1EE-B470E9A5101D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
