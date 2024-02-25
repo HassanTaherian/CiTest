@@ -1,15 +1,14 @@
 name: .NET
 
-env:
-  ConsoleProjectPath: ${{github.workspace}}/ConsoleApp1
-
 on:
   pull_request_target:
     types:
       - closed
     paths:
-      - '${{env.ConsoleProjectPath}}/**'
+      - 'ConsoleApp1/**'
 
+env:
+  ConsoleProjectPath: ${{github.workspace}}/ConsoleApp1
 
 jobs:
   if_merged:
