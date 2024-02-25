@@ -7,8 +7,6 @@ on:
   pull_request_target:
     types:
       - closed
-    paths:
-      - ${{env.ConsoleProjectPath}}
 
 jobs:
   if_merged:
