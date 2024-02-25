@@ -8,7 +8,7 @@ on:
     types:
       - closed
     paths:
-      - ${{ConsoleProjectPath}}
+      - ${{env.ConsoleProjectPath}}
 
 jobs:
   if_merged:
