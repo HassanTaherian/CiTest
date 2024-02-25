@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
 env:
-  SlnPath: ./CiTest.sln
+  SlnPath: ${{github.workspace}}/CiTest.sln
 
 jobs:
   build:
