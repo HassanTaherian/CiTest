@@ -31,6 +31,6 @@ jobs:
 
     - name: Publish to GitHub NuGet Registry
       run: |
-          foreach($file in (Get-ChildItem "${{ env.NuGetDirectory }}" -Recurse -Include *.nupkg)) {
+          foreach file in ${{env.NuGetDirectory}}/*.nupkg; do
             dotnet nuget push $file "${{ secrets.GITHUB_TOKEN }}" --source "github" --skip
-          }
+          done
