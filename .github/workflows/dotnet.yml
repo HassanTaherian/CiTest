@@ -11,7 +11,7 @@ env:
   ConsoleProjectPath: ${{github.workspace}}/ConsoleApp1
 
 jobs:
-  if_merged:
+  publish_nuget_package_if_pr_is_merged:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
@@ -24,7 +24,12 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore ${{env.ConsoleProjectPath}}
-    - name: Build
-      run: dotnet build ${{env.ConsoleProjectPath}} --no-restore
+
+    - name: Pack ConsoleProject
+      run: dotnet pack ${{env.ConsoleProjectPath}} --configuration Release --output ${{env.NugetDirectory}}
+
+    - name: Publish to GitHub NuGet Registry
+      run: |
+          foreach($file in (Get-ChildItem "${{ env.NuGetDirectory }}" -Recurse -Include *.nupkg)) {
+            dotnet nuget push $file "${{ secrets.GITHUB_TOKEN }}" --source "github" --skip
+          }
