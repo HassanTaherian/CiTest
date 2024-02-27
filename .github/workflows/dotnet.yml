@@ -9,7 +9,7 @@ on:
 
 env:
   ConsoleProjectPath: ${{github.workspace}}/ConsoleApp1
-  NugetDirectory: ${{github.workspace}}/nuget
+  NuGetDirectory: ${{github.workspace}}/nuget
 
 jobs:
   publish_nuget_package_if_pr_is_merged:
@@ -27,7 +27,7 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Pack ConsoleProject
-      run: dotnet pack ${{env.ConsoleProjectPath}} --configuration Release --output ${{env.NugetDirectory}}
+      run: dotnet pack ${{env.ConsoleProjectPath}} --configuration Release --output ${{env.NuGetDirectory}}
 
     - name: Publish to GitHub NuGet Registry
       run: |
