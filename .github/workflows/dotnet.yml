@@ -32,5 +32,5 @@ jobs:
     - name: Publish to GitHub NuGet Registry
       run: |
           for file in ${{env.NuGetDirectory}}/nuget/*.nupkg; do
-            dotnet nuget push $file "${{ secrets.GITHUB_TOKEN }}" --source "github" --skip
+            dotnet nuget push $file --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/DevBlogs/index.json"
           done
