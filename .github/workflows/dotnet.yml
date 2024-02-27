@@ -9,6 +9,7 @@ on:
 
 env:
   ConsoleProjectPath: ${{github.workspace}}/ConsoleApp1
+  NugetDirectory: ${{github.workspace}}/nuget
 
 jobs:
   publish_nuget_package_if_pr_is_merged:
